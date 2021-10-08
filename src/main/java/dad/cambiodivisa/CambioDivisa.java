@@ -17,7 +17,7 @@ public class CambioDivisa extends Application {
 	private TextField destinoText;
 	private ComboBox<Divisa> divisaOrigenCombo;
 	private ComboBox<Divisa> divisaDestinoCombo;
-	private Button cambiar;
+	private Button cambiarButton;
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -55,13 +55,13 @@ public class CambioDivisa extends Application {
 		HBox cambio2 = new HBox(5, destinoText, divisaDestinoCombo);
 		cambio2.setAlignment(Pos.CENTER);
 		
-		cambiar = new Button("Cambiar");
-		cambiar.setOnAction(e -> onCambiarAction(e));
+		cambiarButton = new Button("Cambiar");
+		cambiarButton.setOnAction(e -> onCambiarButtonAction(e));
 		
 		VBox root = new VBox(5);
 		root.setAlignment(Pos.CENTER);
 		root.setSpacing(5);
-		root.getChildren().addAll(cambio1, cambio2, cambiar);
+		root.getChildren().addAll(cambio1, cambio2, cambiarButton);
 		
 		Scene scene = new Scene(root, 350, 250);
 		primaryStage.setTitle("Cambio de Divisa");
