@@ -70,7 +70,7 @@ public class CambioDivisa extends Application {
 		
 	}
 
-	private void onCambiarAction(ActionEvent e) {
+	private void onCambiarButtonAction(ActionEvent e) {
 			Double cantidadOrigen = Double.parseDouble(origenText.getText());
 			Divisa divisa_Origen = divisaOrigenCombo.getSelectionModel().getSelectedItem();
 			Divisa divisa_Destino = divisaDestinoCombo.getSelectionModel().getSelectedItem();
